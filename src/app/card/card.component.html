@@ -1,0 +1,14 @@
+<div class="card">
+<h2>{{ title }}</h2>
+<p> {{ text }}</p>
+<p>{{ model | json}}</p>
+<p>{{ getInfo() }}</p>
+
+<div class="buttons">
+    <img [src]="imgUrl" >
+    <button (click)="changeTitle()">Change title</button>
+</div>
+<div>
+    <input type="text" (input)="onInput($event)">
+</div>
+</div>
