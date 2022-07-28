@@ -1,7 +1,9 @@
 <div class="card">
 <h2>{{ title }}</h2>
 <p> {{ text }}</p>
-<p>{{ model | json}}</p>
+<p>{{ model.model | json}}</p>
+<p> Price : {{ model.price | json}}</p>
+<p>{{ model.memory | json}} Gb</p>
 <p>{{ getInfo() }}</p>
 
 <div class="buttons">

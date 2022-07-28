@@ -1,7 +1,9 @@
 import { style } from '@angular/animations';
 import { Interpolation } from '@angular/compiler';
 import {Component, OnInit} from '@angular/core';
-import { timeout } from 'rxjs';
+import { bufferToggle, timeout } from 'rxjs';
+import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
+import { Product } from '../interface/interface';
 
 
 
@@ -15,9 +17,11 @@ export class CardComponent implements OnInit {
     title:string = 'My Card iPhone'
     text = 'Options of pFone'
     model = {
-        name: 'iPhone',
+        nameProduct: 'iPhone',
         model: '12',
-        price : '1000$'
+        price : '1000$',
+        color: 'Blue',
+        memory: '128'
     }
     changeTitle(){
         this.title = 'New Title My Phone'
