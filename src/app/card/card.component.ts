@@ -21,10 +21,22 @@ export class CardComponent implements OnInit {
         model: '12',
         price : '1000$',
         color: 'Blue',
-        memory: '128'
+        memory: '128',
+        amount : 7
+        
     }
     changeTitle(){
         this.title = 'New Title My Phone'
+    }
+
+    changeAmount(){
+        if(this.model.amount > 0){
+            this.model.amount = this.model.amount - 1
+        }
+        else{
+            alert('not Amount')
+        }
+        
     }
 
     onInput(event:any){

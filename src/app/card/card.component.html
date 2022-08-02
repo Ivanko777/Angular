@@ -4,11 +4,15 @@
 <p>{{ model.model | json}}</p>
 <p> Price : {{ model.price | json}}</p>
 <p>{{ model.memory | json}} Gb</p>
+<p>Amount in Shop :{{ model.amount }}</p>
 <p>{{ getInfo() }}</p>
 
 <div class="buttons">
     <img [src]="imgUrl" >
+    <br>
     <button (click)="changeTitle()">Change title</button>
+    <br>
+    <button (click)="changeAmount()">Buy</button>
 </div>
 <div>
     <input type="text" (input)="onInput($event)">
