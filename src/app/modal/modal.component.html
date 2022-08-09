@@ -1,0 +1,15 @@
+<div class="modal">
+    <div class="modal-list" *ngFor="let picture of pictures" >
+        <div class="picture-wrapper" app-modal-info [pictureInfo]="picture">
+
+        
+        <br>
+        <div class="URL"> <img src="{{picture.URL}}" alt="">   
+        </div>
+        <div class="model">{{picture.model}}</div>
+        <div class="amount">{{picture.amount}}</div>
+        <div class="name">{{ picture.name}}</div>
+        </div>
+    </div>
+
+</div>

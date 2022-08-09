@@ -1,6 +1,6 @@
 import { style } from '@angular/animations';
 import { Interpolation } from '@angular/compiler';
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { bufferToggle, timeout } from 'rxjs';
 import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
 import { Product } from '../interface/interface';
@@ -8,23 +8,32 @@ import { Product } from '../interface/interface';
 
 
 @Component({
-    selector : 'app-card',
+    selector : 'app-card', 
     templateUrl: './card.component.html',
     styleUrls: ['./card.component.scss'],
     interpolation : ['{{','}}']
 })
+
 export class CardComponent implements OnInit {
-    title:string = 'My Card iPhone'
-    text = 'Options of pFone'
+
+    @Input()
+    card!: Product;
+
+    title:string = 'Change Me'
+    text = 'The third Apple that changed the world'
+
     model = {
         nameProduct: 'iPhone',
         model: '12',
         price : '1000$',
         color: 'Blue',
         memory: '128',
-        amount : 7
-        
+        amount : 7  
     }
+
+    constructor() {
+    }
+
     changeTitle(){
         this.title = 'New Title My Phone'
     }

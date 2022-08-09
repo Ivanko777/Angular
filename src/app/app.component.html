@@ -1,6 +1,23 @@
 <div class="container">
     <h1>Hello People</h1>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-form></app-form>
+    <hr>
+    <button (click)="toggleCards()"> Clear</button>
+    <hr>
+
+    <!-- If products are present -->
+    <div *ngIf="toggle; else noCards">
+        <app-card *ngFor="let el of phones" [card]="el"></app-card>
+    </div>
+
+    <ng-template #noCards>
+        <p>
+            No pHone
+        </p>
+
+    </ng-template>
+
+    <app-modal>
+        
+    </app-modal>
+
 </div>

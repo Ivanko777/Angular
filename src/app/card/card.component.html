@@ -1,20 +1,24 @@
 <div class="card">
-<h2>{{ title }}</h2>
-<p> {{ text }}</p>
-<p>{{ model.model | json}}</p>
-<p> Price : {{ model.price | json}}</p>
-<p>{{ model.memory | json}} Gb</p>
-<p>Amount in Shop :{{ model.amount }}</p>
-<p>{{ getInfo() }}</p>
+    <h2>{{ title }}</h2>
+    <p>{{ card.name | json}}</p>
+    <img [src]="imgUrl">
+    <h3> {{ text }}</h3>
 
-<div class="buttons">
-    <img [src]="imgUrl" >
-    <br>
-    <button (click)="changeTitle()">Change title</button>
-    <br>
-    <button (click)="changeAmount()">Buy</button>
-</div>
-<div>
-    <input type="text" (input)="onInput($event)">
-</div>
+    <p> Price : {{ card.price | json}}</p>
+    <p>{{ card.memory | json}} Gb</p>
+    <p [ngStyle]="{
+    color: card.amount > 3 ? 'green' : 'red'
+    }">Amount in Shop :{{ card.amount }}</p>
+    <h4>{{ getInfo() }}</h4>
+
+        <div class="buttons">
+            <button> More Informations</button>
+        <br>
+        <button (click)="changeTitle()">Change title</button>
+        <br>
+        <button (click)="changeAmount()">Buy</button>
+         </div>
+    <div>
+        <input type="text" (input)="onInput($event)">
+    </div>
 </div>

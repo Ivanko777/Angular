@@ -1,12 +1,20 @@
 export interface Product{
     name: string;
-    value: number;
+    amount: number;
     price:number;
-    countryCreate: string;
+    color: string;
+    memory : number;
 }
 
 export interface Iphone extends Product{
-    color: string;
-    memory : number;
+    countryCreate: string;
+
+}
+
+export interface Picture {
+    name: string,
+    amount : number,
+    model: string,
+    URL : string
 }
 
