@@ -1,0 +1,17 @@
+.modal__wrapper{
+    background: black;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal__window{
+    width: 500px;
+    position: absolute;
+    top: 15px;
+    background: palevioletred;
+    translate: -x -1/2;
+}

@@ -1,0 +1,26 @@
+<h2>hi</h2>
+<div class="card">
+    <img [src]="product.image" alt="">
+    <h3>
+
+        {{product.title}}
+    </h3>
+    <p>{{product.price| currency: 'UAH'}} </p>
+    <button 
+    [ngClass]="{
+        'btn1' : !details,
+        'btn2' : details
+    }"
+    (click)="details = !details"
+    >
+        {{details ? 'Skip' : 'Show' }} Detail
+    </button>
+    <div class="show" *ngIf="details">
+        <p>{{product.description}}</p>
+        <p>Rate<span
+            [ngStyle]="{fontWeight : 'bold'}">
+            {{product.rating.rate | number: '1.2-3'}}
+        </span></p>
+    </div>
+
+</div>

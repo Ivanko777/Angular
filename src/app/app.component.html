@@ -1,6 +1,37 @@
-<div class="container">
-    <h1>Hello People</h1>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-form></app-form>
+<app-global-error>
+
+</app-global-error>
+
+
+<div>
+
+    <input type="text"
+    [(ngModel)]="term"
+    >
+
+    <h1 class="font-bold text-center">{{ title | titlecase}}</h1>
+
+    <!-- <app-product [product]="products[0]"></app-product>
+    <app-product [product]="products[1]"></app-product> -->
+
+    <p *ngIf="loading" [ngStyle]="{textAlign: 'center', fontSize: '1.5em'}">
+        Loading...
+    </p>
+
+
+    <div *ngIf="products$ | async as products">
+
+    
+    <app-product *ngFor="let product of products | filterProducts:term ; let i = index "
+     [product]="product"
+    ></app-product>
+</div>
+
+<app-modal title="Create New Product">
+    <app-create-product>
+
+    </app-create-product>
+</app-modal>
+
+
 </div>

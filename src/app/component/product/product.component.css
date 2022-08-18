@@ -1,0 +1,38 @@
+img{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+.card{
+    text-align: center;
+    border: 1px solid red;
+    margin: 10px;
+    padding: 10px;
+}
+/* button  {
+    width: 100px;
+    height: 40px;
+    border-radius: 15%;
+    color: black;
+    background-color: yellow;
+    border: green 1px solid;
+} */
+
+.btn1 {
+        width: 100px;
+        height: 40px;
+        border-radius: 15%;
+        color: black;
+        background-color: yellow;
+        border: green 1px solid;
+    
+}
+.btn2 {
+    width: 100px;
+    height: 40px;
+    border-radius: 15%;
+    color: black;
+    background-color: blue;
+    border: green 1px solid;
+
+}
