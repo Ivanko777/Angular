@@ -1,0 +1,31 @@
+<!-- <app-product
+*ngFor="let product of products" [product]="product"></app-product> -->
+
+<div class="buy_general">
+
+
+    
+    <div *ngFor="let local of products"
+    class="product__card">
+        
+
+    <button class="global__button" (click)="removeProduct(local.id)">&times;</button>
+       
+        <p>
+            Name :{{local.title}}
+        </p>
+        <p class="font-bold">
+            Price : {{local.price| currency}}
+        </p>
+
+        <p>
+            Rate :{{local.rating.rate}}
+        </p>
+        <p>
+            <img src="{{local.image}}" alt="">
+        </p>
+
+    
+    </div>
+
+</div>

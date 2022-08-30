@@ -1,9 +1,11 @@
-.container{
-    max-width: 800px;
-    margin: 0 auto;
-    padding-top: 3rem;
+.app__newproduct{
+    position: fixed;
+    background: red;
+    color: black;
+    bottom: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 20%;
 }
 
-h1{
-    text-align: center;
-}

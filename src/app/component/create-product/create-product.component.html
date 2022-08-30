@@ -1,0 +1,30 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="createproduct__form">
+    <p>Enter name of Product</p>
+    <input type="text" placeholder="Product name" formControlName="title" appFocus>
+    <p>Enter Description</p>
+    <input type="text" placeholder="description me" formControlName="description">
+    <p>Enter Price</p>
+    <input type="text" placeholder="Enter price" formControlName="price">
+    <p>Get link from img</p>
+    <input type="text" placeholder="link from image" formControlName="image">
+
+    <p>Enter Rating</p>
+    <input type="text" name="" placeholder="Enter rating" formControlName="rating">
+
+
+
+    <p class="create__p" *ngIf="title.hasError('minlength')">Needs more Characters for Name. Left
+        {{7-title.value.length}}
+    </p>
+    <p class="create__p" *ngIf="description.hasError('minlength')">Needs more Characters for Description. Left
+        {{12-description.value.length}}
+    </p>
+    <p class="create__p" *ngIf="price.hasError('minlength')">Needs more Characters for Price. Left
+        {{2-price.value.length}}
+    </p>
+
+    <br>
+    <button type="submit" [disabled]="form.invalid" class="button__submit">
+        Create
+    </button>
+</form>

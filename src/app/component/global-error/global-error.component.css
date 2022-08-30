@@ -1,0 +1,14 @@
+.global__error{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    background: rebeccapurple;
+    color: white;
+    position: relative;
+}
+
+.global__button{
+    position: absolute;
+    color: blue;
+}

@@ -1,0 +1,24 @@
+<div class="card">
+    <img [src]="product.image" alt="">
+    <h3>
+
+        {{product.title}}
+    </h3>
+    
+    <p class="font-bold">Price :{{product.price| currency: 'USD'}} </p>
+    <button [ngClass]="{'btn1' : !details,'btn2' : details}"
+     (click)="details = !details">
+        {{details ? 'Skip' : 'More' }}
+    </button>
+    <div class="show" *ngIf="details">
+        <p>{{product.description}}</p>
+       
+        <p>Rate:<span [ngStyle]="{fontWeight : 'bold'}">
+            
+                {{product.rating.rate | number: '1.2-3'}}
+                <br>
+                <button class="product__buy" (click)="localStorageService.buy(product)">Buy</button>
+            </span></p>
+    </div>
+
+</div>
