@@ -1,0 +1,108 @@
+
+.product__card{
+    width: 33%;
+}
+
+.this__window{
+    display: flex;
+    flex-wrap: wrap;
+}
+input{
+
+    margin: 10px;
+   border: 1px solid #cccccc;
+   border-radius: 3px; 
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px; 
+   -khtml-border-radius: 3px; 
+   background: #ffffff !important; 
+   outline: none; 
+   height: 44px; 
+   width: 320px; 
+   color: #cccccc; 
+   font-size: 21px; 
+   font-family: Tahoma; 
+   text-align: center;
+
+}
+div{
+    text-align: center;
+}
+
+.general__create_product {
+    display: inline-flex;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 12px 30px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', Тahoma, sans-serif;
+    background: #337AB7;
+    cursor: pointer;
+    border: 2px solid #BFE2FF;
+    overflow: hidden;
+    z-index: 1;
+}
+.general__create_product:hover,
+.general__create_product:active,
+.general__create_product:focus {
+    color: #FFF;
+}
+.general__create_product:before,
+.general__create_product:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 100%;
+    background-color: #1C4B73;
+    z-index: -1;
+}
+.general__create_product:before {
+    left: -20px;
+    transform: translate(-50%, -50%);
+}
+.general__create_product:after {
+    right: -20px;
+    transform: translate(50%, -50%);
+}
+.general__create_product:hover:before,
+.general__create_product:active:before,
+.general__create_product:focus:before {
+    animation: from-left 0.5s both;
+}
+.general__create_product:hover:after,
+.general__create_product:active:after,
+.general__create_product:focus:after {
+    animation: from-right 0.5s both;
+}
+@keyframes from-right {
+    0% {
+        right: -20px;
+    }
+    50% {
+        right: 50%;
+        width: 20px;
+    }
+    100% {
+        right: 50%;
+        width: 100%;
+    }
+}
+@keyframes from-left {
+    0% {
+        left: -20px;
+    }
+    50% {
+        left: 50%;
+        width: 20px;
+    }
+    100% {
+        left: 50%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,67 @@
+.button__submit{
+     padding-right: 1rem;
+     padding-left: 1rem;
+     padding-top: 0.5rem; 
+     padding-bottom: 0.5rem;
+     background: blue;
+     color: aquamarine;
+     margin: 10px;
+     border-radius: 12px;
+}
+.createproduct__form{
+     margin: 10px;
+}
+
+input{
+
+    margin: 10px;
+   border: 1px solid #cccccc;
+   border-radius: 3px; 
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px; 
+   -khtml-border-radius: 3px; 
+   background: #ffffff !important; 
+   outline: none; 
+   height: 44px; 
+   width: 320px; 
+   color: #cccccc; 
+   font-size: 21px; 
+   font-family: Tahoma; 
+   text-align: center;
+}
+
+
+.button__submit{
+     display: inline-block; 
+     box-sizing: border-box;
+     padding: 0 20px;
+     
+     margin: 0 15px 15px 0;
+     outline: none;
+     border: none; 
+     border-radius: 6px;
+     height: 40px;
+     line-height: 40px;
+     font-size: 17px;
+     font-weight: 600;
+     text-decoration: none;
+     color: #115aeb;
+     background-color: #e7f3ff;
+     cursor: pointer;
+     user-select: none;
+     appearance: none;
+     touch-action: manipulation;
+ }
+ .button__submit:focus-visible {
+     box-shadow: 0 0 0 2px rgb(73, 44, 236);
+ }
+ .button__submit:hover {
+     background-color: #5995ce;
+ }
+ .button__submit:active {
+     transform: scale(0.96);
+ }
+ .button__submit:disabled {
+     pointer-events: none;
+     opacity: 0.65;
+ }

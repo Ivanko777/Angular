@@ -1,0 +1,14 @@
+footer{
+    display:flex;
+    justify-content: center;
+    height: 50px;
+    background: rgb(140, 152, 221);
+}
+
+a{
+    padding: 10px;
+}
+
+span{
+    padding: 10px;
+}
